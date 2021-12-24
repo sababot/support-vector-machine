@@ -34,5 +34,14 @@ int main()
 	w_0 = 1 - (((arr[1].x * w_vec[0]) + (arr[1].y * w_vec[1])) * a);
 
 	// Output
-	cout << "g(x) = " << a * w_vec[0] << "x + " << a * w_vec[1] << "y " << w_0 << endl;
+	cout << "\nhyperplane --> g(x) = " << a * w_vec[0] << "x + " << a * w_vec[1] << "y " << w_0 << endl;
+	int x, y, group;
+	
+	cout << "\nx value for unknown point: ";
+	cin >> x;
+	cout << "y value for unknown point: ";
+	cin >> y;
+	
+	group = (((x * w_vec[0]) + (y * w_vec[1])) * a) + w_0;
+	cout << "\ngroup of unknown point: " << group << endl;
 }
