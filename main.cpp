@@ -41,7 +41,21 @@ int main()
 	cin >> x;
 	cout << "y value for unknown point: ";
 	cin >> y;
+
+	if (((((x * w_vec[0]) + (y * w_vec[1])) * a) + w_0) >= 1)
+	{
+		group = 1;
+	}
 	
-	group = (((x * w_vec[0]) + (y * w_vec[1])) * a) + w_0;
+	else if (((((x * w_vec[0]) + (y * w_vec[1])) * a) + w_0) <= -1)
+	{
+		group = 0;
+	}
+
+	else
+	{
+		group = NULL;
+	}
+
 	cout << "\ngroup of unknown point: " << group << endl;
 }
